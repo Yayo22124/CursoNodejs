@@ -2,6 +2,7 @@
 const Express = require('express');
 const Morgan = require('morgan');
 const studentRouter = require('./routes/student.router')
+const teacherRouter = require('./routes/teacher.router')
 
 // Instanciamos express
 const app = Express();
@@ -21,6 +22,7 @@ app.use(Express.urlencoded({ extended: false }));
     // morgan
 app.use(Morgan('dev'));
     // Router
-app.use(studentRouter);
+app.use('/api/utxj/students/',studentRouter);
+app.use('/api/utxj/teachers/',teacherRouter);
 
 module.exports = app;
