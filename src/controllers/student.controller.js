@@ -12,7 +12,7 @@ studentController.getAll = async (req, res) => {
 
         })
         .catch(err => {
-            res.json({ 'message': `Querie Failed by: ${err}` });
+            res.json({ 'mess    age': `Querie Failed by: ${err}` });
         });
 }
 

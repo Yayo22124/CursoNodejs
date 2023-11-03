@@ -3,7 +3,7 @@ const studentDAO = {};
 
 // Operaciones
     // getAll
-studentDAO.getAll = async () => {
+studentDAO.getAll = async () => {   
     const students = await Student.find(); // consultar y guardar los datos en students
     return students;
 }
